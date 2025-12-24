@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build artifacts
+artifacts/
+cache/
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Hardhat
+.hardhat_artifacts/
+gas-report.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Deployments
+deployments/**/*.json
+!deployments/README.md
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
