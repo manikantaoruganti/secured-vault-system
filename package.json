@@ -1,0 +1,20 @@
+{
+  "name": "secured-vault-system",
+  "version": "1.0.0",
+  "description": "Authorization-Governed Vault System for Controlled Asset Withdrawals",
+  "main": "index.js",
+  "scripts": {
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.js",
+    "deploy:docker": "docker-compose up"
+  },
+  "dependencies": {
+    "ethers": "^6.0.0",
+    "hardhat": "^2.14.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "chai": "^4.3.7"
+  }
+}
