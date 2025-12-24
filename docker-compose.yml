@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  blockchain:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: secured-vault-blockchain
+    ports:
+      - "8545:8545"
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./contracts:/app/contracts:ro
+      - ./scripts:/app/scripts:ro
+      - ./deployments:/app/deployments
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8545"] || exit 1
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - vault-network
+
+networks:
+  vault-network:
+    driver: bridge
